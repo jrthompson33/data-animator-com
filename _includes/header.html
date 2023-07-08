@@ -1,0 +1,23 @@
+<header class="site-header" role="banner">
+    <div class="wrapper">
+        {% assign default_paths = site.pages | map: "path" %}
+        {% assign page_paths = site.header_pages | default: default_paths %}
+        <a class="site-title" rel="author" href="{{ '/index.html' | relativize_url }}">
+            {{ site.title | escape }}
+        </a>
+        <nav class="site-nav">
+            <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+            <label for="nav-trigger">
+                <span class="menu-icon">
+                    <i class="fa fa-bars"></i>
+                </span>
+            </label>
+            <div class="trigger">
+                <a class="page-link" href="{{ '/index.html' | relativize_url }}">Home</a>
+                <a class="page-link" href="{{ '/gallery/index.html' | relativize_url }}">Gallery</a>
+                <a class="page-link" href="{{ '/about.html' | relativize_url }}">About</a>
+                <a class="page-link btn-launch" href="{{ '/app/index.html' | relativize_url }}" target="_data_animator" role="button">Launch <span class="btn-beta-launch">(Beta)</span></a>
+            </div>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,136 @@
+
+
+.gallery-page {
+    display: flex;
+    flex-direction: row;
+
+    &-description {
+        margin-left: 30px;
+
+        .di-files-container {
+            border-top: 1px solid $grey-color-light;
+            padding-top: 15px;
+
+            .di-files-item {
+                display: flex;
+                flex-direction: row;
+                font-size: 14px;
+                line-height: 24px;
+
+                .di-label {
+                    font-size: 12px;
+                    width: 70px;
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                    text-align: right;
+                    margin-right: 10px;
+                }
+
+                .di-details {
+                    p {
+                        margin: 0;
+                    }
+
+                    ul {
+                        margin: 0;
+
+                        li {
+                            margin: 0;
+                        }
+
+                        list-style-type: none;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &-chart {
+        width: 500px;
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        img {
+            border-radius: 2px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+        }
+    }
+
+    margin-bottom: $spacing-unit;
+
+    @include media-query($on-laptop) {
+        display: flex;
+        flex-direction: column;
+
+        &-description {
+            margin-left: 0px;
+            margin-top: $spacing-unit;
+        }
+
+        &-chart {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+}
+
+.gallery-video {
+    video {
+        width: 100%;
+    }
+}
+
+.p-small {
+    font-size: 14px;
+}
+
+.gallery {
+    // text-align: center;
+    margin: -10px;
+    margin-bottom: $spacing-unit;
+
+    &-item {
+        vertical-align: top;
+        display: inline-block;
+        border: 1px solid $gray-200;
+        overflow: hidden;
+        transition: box-shadow 0.1s linear;
+        cursor: pointer;
+        width: 28.2%;
+        max-width: 270px;
+        margin: 12px 1.6%;
+        
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+
+        .item-image {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .item-description {
+            text-align: left;
+            display: block;
+            padding: 12px;
+            padding-bottom: 0px;
+            border-top: 1px solid $gray-200;
+            min-height: 60px;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 0 0 0.1em transparentize($brand-color, 0.6);
+        }
+    }
+}

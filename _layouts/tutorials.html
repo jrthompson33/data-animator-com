@@ -1,0 +1,25 @@
+---
+layout: full
+---
+
+<div class="tutorial-container">
+    <div class="tutorial-contents">
+        {{ content }}
+    </div>
+</div>
+<div class="playlist-container">
+    <div class="playlist-contents">
+        <ul>
+            {% for item in site.tutorials %}
+            <li {% if item.url == page.url %}class="active"{% endif %}><a href="{{ item.url | relativize_url }}">{{item.title}}</a></li>
+                {% if item.sections %}
+                <ul {% if item.url == page.url %}class="active"{% endif %}>
+                {% for section in item.sections %}
+                    <li><a href="{{ item.url | relativize_url }}#{{section[1]}}">{{section[0]}}</a></li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>

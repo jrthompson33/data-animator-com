@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="gallery-page">
+    <div class="gallery-page-chart">
+        <img src="{{ page.image }}" alt="{{ page.title }}" />
+    </div>
+    <div class="gallery-page-description">
+        {{ content }}
+        {% if page.diFiles %}
+            <div class="di-files-container">
+                <div class="di-files-item">
+                    <div class="di-label">Vis Boards</div>
+                    <div class="di-details"><a href="{{ page.diFiles }}" download><i class="fa fa-download"></i> Download Static Vis Boards (*.diproj)</a>  for the {{ page.title }} example.</div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<h2>Creation Process</h2>
+<p class="gallery-video">
+    {% include vimeoExample.html %}
+</p>
+
+<h2>Final Version</h2>
+<p class="gallery-video">
+    {% include vimeoFinal.html %}
+</p>
