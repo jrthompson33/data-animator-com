@@ -1,5 +1,5 @@
 # Data-Animator.com
-Public website for data animator project - built at: (https://data-animator.com)[https://data-animator.com]. Static website developed with jekyll. Follow build instructions:
+Public website for data animator project - built at: [https://data-animator.com](https://data-animator.com). Static website developed with jekyll. Follow build instructions:
 
 ## Getting Started
 1. [Install requirements for Jekyll](https://jekyllrb.com/docs/installation/)
